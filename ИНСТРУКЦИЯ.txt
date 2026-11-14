@@ -1,0 +1,26 @@
+GTA MOBILE — ANDROID PROJECT
+
+Что это:
+- Android Studio project для сборки APK.
+- Игра GTA Mobile встроена локально в app/src/main/assets/index.html.
+- Приложение открывает игру на весь экран в Android WebView.
+- Сеть не требуется для запуска самой игры, поскольку HTML-файл включён в APK.
+- Минимальная версия Android: 6.0 (API 23).
+- Ориентация: альбомная.
+
+СБОРКА ЧЕРЕЗ ANDROID STUDIO (Windows):
+1. Установи Android Studio и Android SDK Platform 35.
+2. Распакуй архив в обычную папку.
+3. В Android Studio выбери Open и укажи папку GTA_Mobile_Android_Project.
+4. Дождись окончания Gradle Sync.
+5. Выбери Build -> Build Bundle(s) / APK(s) -> Build APK(s).
+6. APK появится здесь: app/build/outputs/apk/debug/app-debug.apk
+7. Перенеси APK на Android-телефон и установи. Если телефон спросит разрешение, разреши установку из этого источника.
+
+СБОРКА ЧЕРЕЗ GITHUB ACTIONS:
+В архиве есть .github/workflows/build-apk.yml. Если загрузить структуру проекта в отдельный GitHub-репозиторий, открыть вкладку Actions и запустить Build GTA Mobile APK, GitHub соберёт APK. После завершения скачай артефакт GTA-Mobile-Android-APK.
+
+ВАЖНО:
+Это проект для сборки тестового debug APK, не подписанный релизный APK для публикации в Google Play.
+Фактический запуск на Android-устройстве ещё нужно проверить. WebGL и производительность зависят от версии Android System WebView и мощности телефона.
+Исходная игровая HTML-версия не переписывалась; она помещена внутрь приложения.
